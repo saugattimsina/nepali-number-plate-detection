@@ -1,0 +1,27 @@
+{% extends 'layout.html'%}
+{% block body %}
+<h1 class="text-danger text-center"><b>{{upPlate}}</b></h1>
+    <div class="jumbutton text-center">
+        <h2><strong>Images</strong></h2>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+        <br>
+            {% for r in photos %}
+                <li class="list-group-item"><img src="{{r}}" width="500" height="500" class="image-fluid image-thumbnail" > </li>
+            {% endfor%}
+        </div>
+    </div>
+<br>
+   <div class="container-fluid">
+    <h1 class="text-center" style="padding:10px;"><strong>Segmented list</strong></h1>
+    <div class="row" style="margin-left: 150px;padding-left: 20px;">
+    <br>
+    {% for s in segLists %}
+    <li class="list-group-item"><img src="{{s}}" width="100" height="100" class="image-fluid image-thumbnail"> </li>
+{% endfor%}
+</div>
+</div>
+{% endblock %}
